@@ -1,0 +1,261 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\chatclient.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\chatclient.ico"
+IDI_ICON1               ICON    DISCARDABLE     "res\\user.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CHATCLIENT_DIALOG DIALOGEX 0, 0, 164, 338
+STYLE WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "MyChat-Client V1.0"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "用户登陆",IDOK,33,158,50,30,WS_GROUP,
+                    WS_EX_DLGMODALFRAME
+    LTEXT           "状态: 等待用户登陆......",IDC_STATIC_ZT,9,201,144,8
+    LTEXT           "用户ID:",IDC_STATIC_ID,15,113,29,8
+    LTEXT           "用户密码:",IDC_STATIC_PASS,7,137,37,8
+    EDITTEXT        IDC_EDIT_ID,48,111,91,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASS,48,135,91,13,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "取消登陆",IDC_QUXIAO,33,158,50,30,0,WS_EX_DLGMODALFRAME
+    LTEXT           "当前在线人数:0 人",IDC_STATIC_ZXNUM,7,314,104,10
+    LTEXT           "我的ID:",IDC_STATIC_MYID,96,7,29,8
+    LTEXT           "我的名字:",IDC_STATIC_MYNAME,7,7,37,8
+    LTEXT           "Sucoder",IDC_MYNAME,45,7,49,9
+    LTEXT           "1000",IDC_MYID,127,7,30,10
+    PUSHBUTTON      "新用户注册",IDC_BUTTON_REG,90,158,50,30,0,
+                    WS_EX_DLGMODALFRAME
+    CONTROL         "List1",IDC_LIST_USER,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_NOLABELWRAP | LVS_AUTOARRANGE | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,20,150,290
+    LTEXT           "By:Sucoder QQ:330729793",IDC_STATIC,63,325,93,8
+    PUSHBUTTON      "关闭声音",IDC_BUTTON_SOUND,112,310,44,15,BS_NOTIFY
+END
+
+IDD_REG_DIALOG DIALOG DISCARDABLE  0, 0, 122, 94
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "新用户注册"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "注册",IDOK,20,70,34,14
+    PUSHBUTTON      "关闭",IDCANCEL,68,70,34,14
+    LTEXT           "昵称:",IDC_STATIC_NAME,20,15,19,8
+    LTEXT           "密码:",IDC_STATIC_PASS,20,33,19,8
+    EDITTEXT        IDC_EDIT_NAME,41,14,69,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PASS,41,32,69,12,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "重复密码:",IDC_STATIC_PASS2,4,51,35,8
+    EDITTEXT        IDC_EDIT_PASS2,41,50,69,12,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_CHAT_DIALOG DIALOG DISCARDABLE  0, 0, 203, 171
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "聊天窗口"
+FONT 10, "System"
+BEGIN
+    EDITTEXT        IDC_EDIT_SEND,7,134,157,30,ES_MULTILINE | ES_AUTOVSCROLL
+    DEFPUSHBUTTON   "发送",IDOK,166,133,30,14
+    PUSHBUTTON      "关闭",IDCANCEL,166,150,30,14
+    EDITTEXT        IDC_EDIT_MSG,7,7,189,114,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    WS_VSCROLL
+    LTEXT           "提示:按Ctrl+Enter换行,Enter默认为发送。",IDC_STATIC_TS,
+                    7,123,142,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "chatclient Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "chatclient\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2013\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "chatclient.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "chatclient 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CHATCLIENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 157
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 337
+    END
+
+    IDD_REG_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 118
+        TOPMARGIN, 2
+        BOTTOMMARGIN, 90
+    END
+
+    IDD_CHAT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 164
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// WAVE
+//
+
+IDR_LOGIN               WAVE    DISCARDABLE     "res\\login.wav"
+IDR_LOGOUT              WAVE    DISCARDABLE     "res\\logout.wav"
+IDR_MSG                 WAVE    DISCARDABLE     "res\\msg.wav"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDP_SOCKETS_INIT_FAILED "Windows 通信端口初始化失败。"
+END
+
+#endif    // Chinese (中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\chatclient.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

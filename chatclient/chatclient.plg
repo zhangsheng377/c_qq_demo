@@ -1,0 +1,57 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: chatclient - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Release/chatclient.res" /d "NDEBUG" "C:\Documents and Settings\Administrator\桌面\mychat\chatclient\chatclient.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\TEMP\RSP8.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Release/" /Fp"Release/chatclient.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\Administrator\桌面\mychat\chatclient\chatclient.cpp"
+"C:\Documents and Settings\Administrator\桌面\mychat\chatclient\chatclientDlg.cpp"
+"C:\Documents and Settings\Administrator\桌面\mychat\chatclient\ChatDlg.cpp"
+"C:\Documents and Settings\Administrator\桌面\mychat\chatclient\RegDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\TEMP\RSP8.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\TEMP\RSP9.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Release/" /Fp"Release/chatclient.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Documents and Settings\Administrator\桌面\mychat\chatclient\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\TEMP\RSP9.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\TEMP\RSPA.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:no /pdb:"Release/chatclient.pdb" /machine:I386 /out:"Release/chatclient.exe" 
+".\Release\chatclient.obj"
+".\Release\chatclientDlg.obj"
+".\Release\ChatDlg.obj"
+".\Release\RegDlg.obj"
+".\Release\StdAfx.obj"
+".\Release\chatclient.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\TEMP\RSPA.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+chatclient.cpp
+chatclientDlg.cpp
+ChatDlg.cpp
+RegDlg.cpp
+Generating Code...
+Linking...
+Creating command line "bscmake.exe /nologo /o"Release/chatclient.bsc"  ".\Release\StdAfx.sbr" ".\Release\chatclient.sbr" ".\Release\chatclientDlg.sbr" ".\Release\ChatDlg.sbr" ".\Release\RegDlg.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+chatclient.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
